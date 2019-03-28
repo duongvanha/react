@@ -16,7 +16,7 @@ class Bar extends Component {
 
 
     render() {
-        return <Demo>{Date.now()}</Demo>;
+        return <Demo>{this.state.count}</Demo>;
     }
 }
 
@@ -28,9 +28,7 @@ class Demo extends Component {
 }
 
 const Foo = (props) => {
-    return <div style={{
-        color: '#' + ((1 << 24) * Math.random() | 0).toString(16),
-    }}>
+    return <div style={{color: 'blue'}}>
         {props.children}
     </div>
 };
